@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact &amp; First-Visit Guide — Lily Wong Massage Therapy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="contact">
+<div data-include="nav"></div>
+
+<header class="page-header" data-screen-label="07 Contact — Header">
+  <div class="container">
+    <span class="eyebrow">Contact &amp; Booking</span>
+    <h1>Send a few details.<br/>I'll send back a time.</h1>
+    <p class="lead">Booking is by inquiry. Tell me what's going on, and I'll reply personally within one business day with two or three time options that fit your week.</p>
+  </div>
+</header>
+
+<!-- Form + studio info -->
+<section class="section">
+  <div class="container">
+    <div class="contact-layout">
+      <form class="contact-form" onsubmit="event.preventDefault(); document.getElementById('thanks').style.display='block'; this.style.display='none';">
+        <h2>Inquiry form</h2>
+
+        <div class="grid-row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" type="text" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" type="email" required />
+          </div>
+        </div>
+        <div class="grid-row">
+          <div class="field">
+            <label for="phone">Phone (optional)</label>
+            <input id="phone" type="tel" />
+          </div>
+          <div class="field">
+            <label for="session">Session type</label>
+            <select id="session">
+              <option>Integrative · 60 min</option>
+              <option>Integrative · 90 min</option>
+              <option>Perinatal · 60 min</option>
+              <option>Perinatal · 90 min</option>
+              <option>Not sure — please advise</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="reason">What brings you in?</label>
+          <textarea id="reason" placeholder="A few sentences on what's going on, what you've tried, and what you're hoping for."></textarea>
+        </div>
+        <div class="field">
+          <label for="when">Preferred days &amp; times</label>
+          <input id="when" type="text" placeholder="e.g. Tuesday or Thursday evenings, Saturday morning" />
+        </div>
+
+        <div class="checkboxes">
+          <label><input type="checkbox" /> First-time client</label>
+          <label><input type="checkbox" /> Referred by a practitioner</label>
+          <label><input type="checkbox" /> Plan to use HSA / FSA</label>
+          <label><input type="checkbox" /> Need a superbill</label>
+        </div>
+
+        <button type="submit" class="btn">Send Inquiry</button>
+        <p class="form-note">Replied to within one business day · Mon–Sat</p>
+      </form>
+
+      <div id="thanks" class="thanks">
+        <span class="eyebrow">Sent</span>
+        <h2 style="margin-top: 18px;">Thank you.</h2>
+        <p class="lead">I'll be in touch within a business day with time options. A direct number is provided in the booking confirmation if anything's urgent.</p>
+      </div>
+
+      <aside class="studio-aside">
+        <div class="aside-block">
+          <span class="eyebrow">Studio</span>
+          <p class="aside-name">8th Floor · Murray Hill</p>
+          <p>44 E 32nd Street<br/>New York, NY 10016</p>
+          <p style="margin-top: 10px; font-size: 13px;">Long Island sessions by arrangement.</p>
+        </div>
+        <div class="aside-block">
+          <span class="eyebrow">Hours</span>
+          <ul class="hours">
+            <li><span>Tue · Wed</span><span>By appointment</span></li>
+            <li><span>Fri · Sat</span><span>By appointment</span></li>
+            <li><span>Mon · Thu · Sun</span><span>Closed</span></li>
+          </ul>
+          <p style="margin-top: 12px; font-size: 12px; color: var(--ink-mute); letter-spacing: 0.04em;">Inquiries replied to within one business day.</p>
+        </div>
+        <div class="aside-block">
+          <span class="eyebrow">Direct</span>
+          <p><a href="mailto:lwonglmt@gmail.com" class="aside-link">lwonglmt@gmail.com</a></p>
+          <p style="margin-top: 8px; font-size: 13px; color: var(--ink-soft);">Phone provided upon booking confirmation.</p>
+        </div>
+        <div class="aside-block">
+          <span class="eyebrow">Subway</span>
+          <ul class="subway">
+            <li><span class="line line-456">6</span><span>33 St (Park Ave)</span></li>
+            <li><span class="line line-bdfm">B</span><span class="line line-bdfm">D</span><span class="line line-bdfm">F</span><span class="line line-bdfm">M</span><span>34 St – Herald Sq</span></li>
+            <li><span class="line line-nqrw">N</span><span class="line line-nqrw">Q</span><span class="line line-nqrw">R</span><span class="line line-nqrw">W</span><span>34 St – Herald Sq</span></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- Map -->
+<section class="map-band">
+  <div class="map">
+    <svg viewBox="0 0 1280 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="streets" x="0" y="0" width="100" height="80" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)">
+          <rect width="100" height="80" fill="#1B3A4B"/>
+          <line x1="0" y1="0" x2="100" y2="0" stroke="#2E5566" stroke-width="0.5"/>
+          <line x1="0" y1="40" x2="100" y2="40" stroke="#2E5566" stroke-width="0.4"/>
+          <line x1="0" y1="0" x2="0" y2="80" stroke="#2E5566" stroke-width="0.5"/>
+          <line x1="50" y1="0" x2="50" y2="80" stroke="#2E5566" stroke-width="0.4"/>
+        </pattern>
+      </defs>
+      <rect width="1280" height="360" fill="url(#streets)"/>
+      <line x1="0" y1="180" x2="1280" y2="120" stroke="#5B8BA0" stroke-width="2" opacity="0.6"/>
+      <line x1="0" y1="220" x2="1280" y2="160" stroke="#5B8BA0" stroke-width="1.5" opacity="0.5"/>
+      <text x="80" y="80" fill="#A8C5D1" font-family="Inter Tight, sans-serif" font-size="11" letter-spacing="2">E 33RD STREET</text>
+      <text x="80" y="280" fill="#A8C5D1" font-family="Inter Tight, sans-serif" font-size="11" letter-spacing="2">E 31ST STREET</text>
+      <text x="900" y="80" fill="#A8C5D1" font-family="Inter Tight, sans-serif" font-size="11" letter-spacing="2">PARK AVE S</text>
+      <!-- pin -->
+      <g transform="translate(640, 180)">
+        <circle r="48" fill="#E8DCC4" opacity="0.15"/>
+        <circle r="24" fill="#E8DCC4" opacity="0.3"/>
+        <circle r="8" fill="#E8DCC4"/>
+        <circle r="3" fill="#1B3A4B"/>
+        <text y="-60" text-anchor="middle" fill="#FAF7F2" font-family="Cormorant Garamond, serif" font-size="22" font-style="italic">44 E 32nd · 8th Floor</text>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- First Visit Guide -->
+<section class="section">
+  <div class="container">
+    <div class="guide-head">
+      <span class="eyebrow">First-Visit Guide</span>
+      <h2 style="margin-top: 18px; max-width: 24ch;">Everything you'd want to know before walking in.</h2>
+    </div>
+    <div class="guide-grid">
+      <article>
+        <span class="card-num">Before</span>
+        <h3>Hydrate and arrive a touch early.</h3>
+        <ul>
+          <li>Fill the intake form online — it arrives with your booking confirmation.</li>
+          <li>Eat lightly an hour or two before. Don't arrive hungry; don't arrive full.</li>
+          <li>Wear comfortable layers.</li>
+        </ul>
+      </article>
+      <article>
+        <span class="card-num">During</span>
+        <h3>Speak up. The work is collaborative.</h3>
+        <ul>
+          <li>Pressure is adjustable in real time — five out of ten is the typical sweet spot.</li>
+          <li>Breath cues, hydration breaks, and position changes are all standard.</li>
+          <li>Quiet is welcome. So is conversation — your call.</li>
+        </ul>
+      </article>
+      <article>
+        <span class="card-num">After</span>
+        <h3>Move gently. Hydrate. Repeat.</h3>
+        <ul>
+          <li>Drink a glass of water before leaving and another within the hour.</li>
+          <li>Light walking is ideal. Heavy training, save for the next day.</li>
+          <li>Soreness for 24–48 hours is common after deeper sessions — not a problem.</li>
+        </ul>
+      </article>
+    </div>
+    <div class="guide-download">
+      <span class="eyebrow">Take it with you</span>
+      <h3 style="margin: 12px 0 24px;">Download the printable first-visit guide.</h3>
+      <a href="#" class="btn btn-ghost">Download PDF</a>
+    </div>
+  </div>
+</section>
+
+<div data-include="footer"></div>
+
+<style>
+  .contact-layout { display: grid; grid-template-columns: 1.5fr 1fr; gap: 80px; align-items: start; }
+  .contact-form { padding-right: 24px; }
+  .contact-form h2 { margin-bottom: 40px; }
+  .grid-row { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .checkboxes { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 32px; margin: 16px 0 32px; padding: 24px 0; border-top: 1px solid var(--rule-soft); border-bottom: 1px solid var(--rule-soft); }
+  .checkboxes label { font-size: 14px; color: var(--ink-soft); display: flex; align-items: center; gap: 10px; cursor: pointer; }
+  .checkboxes input { width: 16px; height: 16px; accent-color: var(--steel-700); }
+  .form-note { margin: 16px 0 0; font-size: 12px; letter-spacing: 0.06em; color: var(--ink-mute); text-transform: uppercase; }
+
+  .thanks { display: none; padding: 60px 40px; background: var(--cream-soft); border: 1px solid var(--rule); }
+
+  .studio-aside { display: flex; flex-direction: column; gap: 36px; padding: 40px; background: var(--paper-warm); border: 1px solid var(--rule-soft); position: sticky; top: 120px; }
+  .aside-block .eyebrow { margin-bottom: 14px; }
+  .aside-name { font-family: var(--font-display); font-size: 20px; color: var(--steel-900); margin: 0 0 6px; }
+  .aside-block p { font-size: 14px; color: var(--ink-soft); margin: 0; line-height: 1.6; }
+  .aside-link { color: var(--steel-900); border-bottom: 1px solid var(--steel-300); padding-bottom: 2px; font-size: 15px; }
+
+  .hours { list-style: none; padding: 0; margin: 0; }
+  .hours li { display: flex; justify-content: space-between; padding: 8px 0; border-top: 1px solid var(--rule-soft); font-size: 13px; color: var(--ink-soft); }
+  .hours li span:first-child { color: var(--ink); font-weight: 500; }
+
+  .subway { list-style: none; padding: 0; margin: 0; }
+  .subway li { display: flex; align-items: center; gap: 6px; padding: 8px 0; font-size: 13px; color: var(--ink-soft); flex-wrap: wrap; }
+  .line { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; font-family: var(--font-body); font-weight: 600; font-size: 11px; color: white; }
+  .line-bdfm { background: #FF6319; }
+  .line-nqrw { background: #FCCC0A; color: #1A1F24; }
+  .line-456 { background: #00933C; }
+  .subway li > span:last-child { margin-left: 6px; }
+
+  @media (max-width: 980px) {
+    .contact-layout { grid-template-columns: 1fr; gap: 48px; }
+    .studio-aside { position: static; }
+    .grid-row { grid-template-columns: 1fr; gap: 0; }
+    .checkboxes { grid-template-columns: 1fr; }
+  }
+
+  .map-band { background: var(--steel-900); }
+  .map { width: 100%; height: 360px; }
+  .map svg { width: 100%; height: 100%; display: block; }
+
+  .guide-head { margin-bottom: 56px; }
+  .guide-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--rule); }
+  .guide-grid article { padding: 40px 28px; border-right: 1px solid var(--rule); }
+  .guide-grid article:first-child { padding-left: 0; }
+  .guide-grid article:last-child { border-right: 0; padding-right: 0; }
+  .guide-grid h3 { margin: 20px 0 20px; max-width: 22ch; }
+  .guide-grid ul { list-style: none; padding: 0; margin: 0; }
+  .guide-grid li { padding: 14px 0 14px 24px; border-top: 1px solid var(--rule-soft); color: var(--ink-soft); font-size: 14px; position: relative; line-height: 1.55; }
+  .guide-grid li::before { content: "→"; position: absolute; left: 0; top: 14px; color: var(--steel-500); font-size: 13px; }
+
+  .guide-download { margin-top: 64px; padding: 56px; background: var(--steel-50); border: 1px solid var(--steel-100); text-align: center; }
+  .guide-download h3 { font-size: 28px; }
+
+  @media (max-width: 880px) {
+    .guide-grid { grid-template-columns: 1fr; }
+    .guide-grid article { border-right: 0; border-bottom: 1px solid var(--rule); padding: 32px 0; }
+  }
+</style>
+
+<script src="chrome.js"></script>
+</body>
+</html>
