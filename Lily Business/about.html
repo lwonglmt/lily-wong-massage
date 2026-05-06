@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About — Lily Wong Massage Therapy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="about">
+<div data-include="nav"></div>
+
+<header class="page-header" data-screen-label="02 About — Header">
+  <div class="container">
+    <div class="about-header-grid">
+      <div class="about-header-copy">
+        <span class="eyebrow">About the Practice</span>
+        <h1>A clinical hour, an integrative foundation, a Midtown studio.</h1>
+        <p class="lead">I'm Lily Wong — a New York State Licensed Massage Therapist, perinatal-certified practitioner, and AMTA member. Lily Wong Massage Therapy PLLC is a private integrative practice serving clients in Midtown Manhattan and Long Island.</p>
+      </div>
+      <figure class="about-header-photo">
+        <img src="images/treatment-room.jpg" alt="The treatment room — exposed brick, large windows overlooking Midtown" />
+        <figcaption>The studio · 44 E 32nd Street, 8th Floor</figcaption>
+      </figure>
+    </div>
+  </div>
+  <style>
+    .about-header-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: end;
+    }
+    .about-header-copy h1 { margin-top: 28px; }
+    .about-header-copy .lead { margin-top: 24px; max-width: 44ch; }
+    .about-header-photo { margin: 0; }
+    .about-header-photo img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      filter: saturate(0.92);
+      display: block;
+    }
+    .about-header-photo figcaption {
+      margin-top: 14px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+    }
+    @media (max-width: 880px) {
+      .about-header-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</header>
+
+<!-- Portrait + bio -->
+<section class="section">
+  <div class="container">
+    <div class="grid grid-2 about-bio" style="gap: 80px; align-items: start;">
+      <div class="bio-portrait">
+        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=900&q=80" alt="Portrait of practitioner" />
+        <div class="bio-caption">
+          <span class="eyebrow">Lily Wong, LMT</span>
+          <p>NYS Licensed · Perinatal Certified · AMTA Member</p>
+        </div>
+      </div>
+      <div class="bio-copy">
+        <h2>Why I practice this way.</h2>
+        <p class="lead">I am the founder of <em class="serif-italic">Lily Wong Massage Therapy PLLC</em>, a private integrative massage therapy practice. My clinical background includes working in multidisciplinary settings alongside acupuncturists, physical therapists, and chiropractors.</p>
+        <p>That environment shaped how I approach every client: <strong>as a whole person with a specific presentation</strong>, not a service to be scheduled. I learned to ask the questions a chiropractor asks — what is the chain of compensation? — and the questions an acupuncturist asks — where is energy held and how is it moving? — and to bring both to my palpation.</p>
+        <p>I hold a perinatal massage certification and am currently pursuing licensure in acupuncture at Pacific College of Health and Science, deepening the integrative foundation of this practice.</p>
+        <p>I am a proud member of the American Massage Therapy Association (AMTA), committed to the highest standards of professional practice and continuing education. Detailed session notes are maintained for every client to track progress and support coordinated care with your broader healthcare team.</p>
+        <p>I don't offer a Swedish-or-deep-tissue menu. <strong>I treat the body that walked in.</strong> The technique follows.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- Approach (moved from home) -->
+<section class="section">
+  <div class="container">
+    <div class="approach-grid">
+      <div class="approach-side">
+        <span class="eyebrow">The Approach</span>
+        <h2>One method shouldn't fit every body.</h2>
+      </div>
+      <div class="approach-body">
+        <p class="lead">Integrative massage is a clinical sequence — not a menu. Each session begins with a working diagnosis of what brought you in: a stiff cervical spine after eight hours at a monitor, a hamstring guarding a recent ACL repair, a pelvis adjusting to a third trimester. The hands that follow respond to that finding.</p>
+        <p>Myofascial release addresses the connective tissue layer the others can't reach. Neuromuscular therapy targets trigger points and nerve compression patterns. Therapeutic deep tissue work addresses deeper layers of muscle and fascia. Therapeutic stretching restores range of motion. Gua sha and cupping decompress and improve circulation. Together, sequenced for your tissue and your hour, they do more than any single modality on its own.</p>
+      </div>
+    </div>
+    <style>
+      .approach-grid {
+        display: grid;
+        grid-template-columns: 5fr 7fr;
+        gap: clamp(32px, 5vw, 80px);
+        align-items: start;
+      }
+      .approach-grid h2 { max-width: 14ch; }
+      .approach-grid .lead { margin-bottom: 24px; }
+      .approach-grid p:not(.lead) { color: var(--ink-soft); }
+      @media (max-width: 880px) {
+        .approach-grid { grid-template-columns: 1fr; gap: 24px; }
+      }
+    </style>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- Philosophy / values -->
+<section class="section section--cream">
+  <div class="container">
+    <span class="eyebrow">Method</span>
+    <h2 style="max-width: 22ch; margin: 18px 0 56px;">Three principles I won't shortcut, even if you'd let me.</h2>
+    <div class="grid grid-3 method-grid">
+      <div>
+        <span class="card-num">01 / Assessment</span>
+        <h3>Treatment without assessment is a guess.</h3>
+        <p>Every session — first or fiftieth — opens with a focused screen: range of motion, palpation, and a question or two about the week. The minute or two it costs returns the hour as actually-targeted work.</p>
+      </div>
+      <div>
+        <span class="card-num">02 / Integration</span>
+        <h3>Modalities serve the body, not the schedule.</h3>
+        <p>Myofascial release, neuromuscular therapy, deep tissue, therapeutic stretching, gua sha, cupping — none of these get an entire hour by default. They get the minutes the tissue needs, in the order it needs them.</p>
+      </div>
+      <div>
+        <span class="card-num">03 / Continuity</span>
+        <h3>One session is a treatment. Ten is a plan.</h3>
+        <p>Detailed session notes are maintained for every client. Your second visit reassesses the first. I'll happily refer out — to an acupuncturist, a chiropractor, your PT, to imaging — if the table isn't the right place for the problem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Training & Practice (moved from home) -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="grid grid-2 credentials" style="gap: 80px; align-items: start;">
+      <div class="cred-image">
+        <img src="https://images.unsplash.com/photo-1591343395082-e120087004b4?auto=format&fit=crop&w=900&q=80" alt="Treatment room interior" style="width:100%; aspect-ratio: 4/5; object-fit: cover; filter: saturate(0.85);" />
+      </div>
+      <div class="cred-copy">
+        <span class="eyebrow">Training &amp; Practice</span>
+        <h2 style="margin: 18px 0 24px;">Pacific College of Health and Science.<br/>Multidisciplinary clinical practice.</h2>
+        <p class="lead" style="margin-bottom: 32px;">Trained at Pacific College of Health and Science. Currently pursuing licensure in acupuncture at the same institution — deepening the integrative foundation of this practice.</p>
+        <ul class="numbered">
+          <li>
+            <h4>NYS Licensed Massage Therapist</h4>
+            <p>New York State Education Department.</p>
+          </li>
+          <li>
+            <h4>Perinatal Massage Certification</h4>
+            <p>Certified prenatal and postpartum practitioner. Positioning and technique adapted for each trimester.</p>
+          </li>
+          <li>
+            <h4>AMTA Member</h4>
+            <p>American Massage Therapy Association — committed to the highest standards of professional practice and continuing education.</p>
+          </li>
+          <li>
+            <h4>Acupuncture licensure (in progress)</h4>
+            <p>Pacific College of Health and Science, New York.</p>
+          </li>
+          <li>
+            <h4>Vodder/Klose lymphatic drainage (August)</h4>
+            <p>Manual lymphatic drainage certification — in training, completing August 2026.</p>
+          </li>
+          <li>
+            <h4>Multidisciplinary clinical experience</h4>
+            <p>Co-treatment alongside acupuncture, chiropractic, and physical therapy.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline -->
+<section class="section">
+  <div class="container">
+    <div class="timeline-head">
+      <span class="eyebrow">Education &amp; Practice</span>
+      <h2>The path, briefly.</h2>
+    </div>
+    <ol class="timeline">
+      <li>
+        <span class="timeline-year">I.</span>
+        <div>
+          <h4>Pacific College of Health and Science</h4>
+          <p>Trained in massage therapy at Pacific College in New York — an institution grounded in integrative and Eastern medicine.</p>
+        </div>
+      </li>
+      <li>
+        <span class="timeline-year">II.</span>
+        <div>
+          <h4>NYS Licensed Massage Therapist</h4>
+          <p>Licensure through the New York State Education Department. First clinical role inside a multidisciplinary practice.</p>
+        </div>
+      </li>
+      <li>
+        <span class="timeline-year">III.</span>
+        <div>
+          <h4>Perinatal Massage Certification</h4>
+          <p>Specialized training in prenatal and postpartum technique — positioning, duration, and contraindication assessment for each trimester.</p>
+        </div>
+      </li>
+      <li>
+        <span class="timeline-year">IV.</span>
+        <div>
+          <h4>Multidisciplinary clinical practice</h4>
+          <p>Co-treatment alongside acupuncturists, chiropractors, and physical therapists — the foundation for the integrative approach used in this practice today.</p>
+        </div>
+      </li>
+      <li>
+        <span class="timeline-year">V.</span>
+        <div>
+          <h4>Acupuncture licensure (in progress)</h4>
+          <p>Currently pursuing licensure in acupuncture at Pacific College of Health and Science, deepening the integrative foundation of this practice.</p>
+        </div>
+      </li>
+      <li>
+        <span class="timeline-year">VI.</span>
+        <div>
+          <h4>Vodder/Klose lymphatic drainage (August 2026)</h4>
+          <p>In training toward Vodder/Klose-method manual lymphatic drainage certification — expanding clinical capability for post-surgical recovery, perinatal care, and chronic inflammatory conditions.</p>
+        </div>
+      </li>
+      <li>
+        <span class="timeline-year">VII.</span>
+        <div>
+          <h4>Lily Wong Massage Therapy PLLC</h4>
+          <p>Now booking new and returning clients in Midtown Manhattan and Long Island. AMTA Member · Detailed session notes maintained for every client.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- Studio band -->
+<section class="section section--steel">
+  <div class="container">
+    <div class="grid grid-2 studio-band">
+      <div>
+        <span class="eyebrow">The Studio</span>
+        <h2>One room, by appointment, in Midtown.</h2>
+        <p class="lead" style="color: var(--steel-300); max-width: 50ch;">A private treatment space at 44 East 32nd Street, 8th Floor. Sessions are by appointment only — Tuesday, Wednesday, Friday, and Saturday.</p>
+        <ul class="studio-list">
+          <li><span>Heated, height-adjustable table</span></li>
+          <li><span>Hypoallergenic, unscented oils on request</span></li>
+          <li><span>Cupping, gua sha, and perinatal bolsters on hand</span></li>
+          <li><span>Detailed session notes maintained for every client</span></li>
+          <li><span>Superbills available on request · HSA / FSA accepted</span></li>
+        </ul>
+      </div>
+      <div class="studio-img-wrap">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80" alt="Quiet treatment room" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta-band">
+  <div class="container cta-inner">
+    <h2>Ready to be seen — actually seen?</h2>
+    <a href="contact.html" class="btn">Book a session →</a>
+  </div>
+</section>
+
+<div data-include="footer"></div>
+
+<style>
+  .bio-portrait { position: sticky; top: 120px; }
+  .bio-portrait img { width: 100%; aspect-ratio: 4/5; object-fit: cover; filter: saturate(0.85); }
+  .bio-caption { padding: 20px 0 0; border-top: 1px solid var(--rule-soft); margin-top: 20px; }
+  .bio-caption p { font-size: 13px; color: var(--ink-soft); margin: 8px 0 0; }
+  .bio-copy h2 { margin-bottom: 32px; }
+  .bio-copy p { color: var(--ink-soft); margin-bottom: 24px; }
+  .bio-copy .lead { color: var(--ink); }
+
+  .method-grid > div { padding-right: 16px; }
+  .method-grid h3 { margin-bottom: 18px; max-width: 18ch; }
+  .method-grid p { color: var(--ink-soft); font-size: 15px; }
+
+  .timeline-head { margin-bottom: 64px; }
+  .timeline-head h2 { margin-top: 18px; }
+  .timeline { list-style: none; padding: 0; margin: 0; max-width: 880px; }
+  .timeline li {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 48px;
+    padding: 36px 0;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .timeline li:last-child { border-bottom: 1px solid var(--rule-soft); }
+  .timeline-year {
+    font-family: var(--font-display);
+    font-size: 32px;
+    color: var(--steel-700);
+    line-height: 1;
+  }
+  .timeline h4 { margin-bottom: 8px; font-size: 19px; }
+  .timeline p { color: var(--ink-soft); margin: 0; }
+
+  .studio-band { gap: 80px; align-items: center; }
+  .studio-band h2 { margin: 18px 0 24px; }
+  .studio-list { list-style: none; padding: 0; margin: 32px 0 0; }
+  .studio-list li {
+    border-top: 1px solid var(--steel-700);
+    padding: 16px 0;
+    color: var(--steel-100);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .studio-list li::before { content: "+"; color: var(--cream); font-family: var(--font-display); font-size: 22px; }
+  .studio-list li:last-child { border-bottom: 1px solid var(--steel-700); }
+  .studio-img-wrap img { width: 100%; aspect-ratio: 4/5; object-fit: cover; filter: saturate(0.7) brightness(0.95); }
+
+  .cta-band { background: var(--paper-warm); border-top: 1px solid var(--rule-soft); }
+  .cta-inner { display: flex; justify-content: space-between; align-items: center; gap: 40px; flex-wrap: wrap; }
+  .cta-inner h2 { max-width: 16ch; }
+
+  @media (max-width: 880px) {
+    .bio-portrait { position: static; }
+    .timeline li { grid-template-columns: 80px 1fr; gap: 24px; }
+    .timeline-year { font-size: 22px; }
+  }
+</style>
+
+<script src="chrome.js"></script>
+</body>
+</html>
