@@ -12,12 +12,42 @@
 <body data-page="testimonials">
 <div data-include="nav"></div>
 
-<header class="page-header" data-screen-label="05 Testimonials — Header">
+<header class="page-header testimonials-header" data-screen-label="05 Testimonials — Header">
   <div class="container">
-    <span class="eyebrow">Testimonials</span>
-    <h1>From the people the work was for.</h1>
-    <p class="lead">A selection of unedited notes from clients — sedentary professionals, athletes mid-season, post-surgical patients, and pregnant clients. Conditions are listed where the client gave permission.</p>
+    <div class="testimonials-header-grid">
+      <div class="testimonials-header-copy">
+        <span class="eyebrow">Testimonials</span>
+        <h1>From the people the work was for.</h1>
+        <p class="lead">A selection of unedited notes from clients — sedentary professionals, athletes mid-season, post-surgical patients, and pregnant clients. Conditions are listed where the client gave permission.</p>
+      </div>
+      <figure class="testimonials-header-photo">
+        <img src="images/20260307_115019.jpg" alt="Lily performing therapeutic shoulder and neck work on a client in the treatment room" />
+      </figure>
+    </div>
   </div>
+  <style>
+    .testimonials-header-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 6vw, 96px);
+      align-items: center;
+    }
+    .testimonials-header-copy .eyebrow { margin-bottom: 28px; }
+    .testimonials-header-copy h1 { margin-bottom: 24px; }
+    .testimonials-header-photo { margin: 0; }
+    .testimonials-header-photo img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      object-position: center top;
+      filter: saturate(0.88);
+      display: block;
+    }
+    @media (max-width: 880px) {
+      .testimonials-header-grid { grid-template-columns: 1fr; gap: 32px; }
+      .testimonials-header-photo img { aspect-ratio: 3/2; }
+    }
+  </style>
 </header>
 
 <!-- Filter tabs (decorative) -->

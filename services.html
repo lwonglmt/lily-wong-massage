@@ -14,10 +14,47 @@
 
 <header class="page-header" data-screen-label="03 Services — Header">
   <div class="container">
-    <span class="eyebrow">Services</span>
-    <h1>One integrative session. Tailored to who you are and what you're dealing with.</h1>
-    <p class="lead">Sessions are condition-driven, not technique-driven. Every visit begins with assessment — the approach follows from there. Technique is selected based on what your body requires at that visit, drawing from the methods below as clinically appropriate.</p>
+    <div class="services-header-grid">
+      <div class="services-header-copy">
+        <span class="eyebrow">Services</span>
+        <h1>One integrative session. Tailored to who you are and what you're dealing with.</h1>
+        <p class="lead">Sessions are condition-driven, not technique-driven. Every visit begins with assessment — the approach follows from there. Technique is selected based on what your body requires at that visit, drawing from the methods below as clinically appropriate.</p>
+      </div>
+      <figure class="services-header-photo">
+        <img src="images/cupping.jpg" alt="Fire cupping and gua sha applied across the back during an integrative session" />
+        <figcaption>Cupping &amp; gua sha · sequenced to the tissue</figcaption>
+      </figure>
+    </div>
   </div>
+  <style>
+    .services-header-grid {
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: end;
+    }
+    .services-header-copy h1 { margin-bottom: 24px; }
+    .services-header-copy .lead { max-width: 52ch; margin-bottom: 0; }
+    .services-header-photo { margin: 0; }
+    .services-header-photo img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      filter: saturate(0.85);
+      display: block;
+    }
+    .services-header-photo figcaption {
+      margin-top: 14px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+    }
+    @media (max-width: 880px) {
+      .services-header-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
 </header>
 
 <!-- Modalities used -->

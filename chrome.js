@@ -1,4 +1,4 @@
-// Shared chrome (nav + footer) injected into every page.
+// Shared chrome (nav + footer) — standalone build (no dev Tweaks panel).
 // Highlight active link based on data-page attribute on <body>.
 
 (function () {
@@ -14,7 +14,6 @@
 
   const active = document.body.dataset.page || "";
 
-  // Top utility bar
   const topbar = `
     <div class="topbar">
       <div class="topbar-inner">
@@ -87,50 +86,11 @@
       </div>
     </footer>`;
 
-  // Inject
   const navHost = document.querySelector('[data-include="nav"]');
   if (navHost) navHost.outerHTML = topbar + nav;
 
   const footHost = document.querySelector('[data-include="footer"]');
   if (footHost) footHost.outerHTML = footer;
-
-  // Inject React + Babel + Tweaks panel (loaded once, in order)
-  function injectScript(attrs) {
-    return new Promise((resolve, reject) => {
-      const s = document.createElement("script");
-      Object.assign(s, attrs);
-      s.onload = resolve;
-      s.onerror = reject;
-      document.head.appendChild(s);
-    });
-  }
-  (async () => {
-    if (window.React) return; // already loaded
-    await injectScript({
-      src: "https://unpkg.com/react@18.3.1/umd/react.development.js",
-      integrity: "sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L",
-      crossOrigin: "anonymous"
-    });
-    await injectScript({
-      src: "https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js",
-      integrity: "sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm",
-      crossOrigin: "anonymous"
-    });
-    await injectScript({
-      src: "https://unpkg.com/@babel/standalone@7.29.0/babel.min.js",
-      integrity: "sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y",
-      crossOrigin: "anonymous"
-    });
-    // Babel transforms scripts of type text/babel — append them as such
-    const panelLoader = document.createElement("script");
-    panelLoader.type = "text/babel";
-    panelLoader.src = "tweaks-panel.jsx";
-    document.body.appendChild(panelLoader);
-    const appLoader = document.createElement("script");
-    appLoader.type = "text/babel";
-    appLoader.src = "tweaks-app.jsx";
-    document.body.appendChild(appLoader);
-  })();
 
   // Reveal-on-scroll
   if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {

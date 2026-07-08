@@ -246,8 +246,7 @@ hr.rule {
   border-color: var(--cream);
 }
 .btn-cream:hover { background: var(--steel-900); color: var(--cream); border-color: var(--steel-900); }
-.btn::after { content: "→"; transform: translateX(0); transition: transform 0.18s; }
-.btn:hover::after { transform: translateX(4px); }
+.btn::after { content: ""; }
 
 @media (max-width: 1100px) {
   .nav-links { display: none; }
