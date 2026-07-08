@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pricing — Lily Wong Massage Therapy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="pricing">
+<div data-include="nav"></div>
+
+<header class="page-header pricing-header" data-screen-label="04 Pricing — Header">
+  <div class="container">
+    <div class="pricing-header-grid">
+      <div class="pricing-header-copy">
+        <span class="eyebrow">Pricing &amp; Packages</span>
+        <h1>Transparent rates.<br/>Meaningful packages.</h1>
+        <p class="lead">All sessions are integrative. Single sessions are for tune-ups, travel, and trying the work. Ten-session packages are how the real change happens — they save 10% and lock in the rate for a year.</p>
+      </div>
+      <figure class="pricing-header-photo">
+        <img src="images/20260307_120226.jpg" alt="Lily performing perinatal massage on a pregnant client in the treatment room" />
+      </figure>
+    </div>
+  </div>
+  <style>
+    .pricing-header-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 6vw, 96px);
+      align-items: center;
+    }
+    .pricing-header-copy .eyebrow { margin-bottom: 28px; }
+    .pricing-header-copy h1 { margin-bottom: 24px; }
+    .pricing-header-photo { margin: 0; }
+    .pricing-header-photo img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      object-position: center top;
+      filter: saturate(0.88);
+      display: block;
+    }
+    @media (max-width: 880px) {
+      .pricing-header-grid { grid-template-columns: 1fr; gap: 32px; }
+      .pricing-header-photo img { aspect-ratio: 3/2; }
+    }
+  </style>
+</header>
+
+<!-- Rate table -->
+<section class="section">
+  <div class="container">
+    <div class="rate-grid">
+      <article class="rate">
+        <header>
+          <span class="card-num">01 / Integrative</span>
+          <h2>Integrative<br/>Massage</h2>
+          <p>The default session. Myofascial release, neuromuscular therapy, deep tissue, therapeutic stretching, gua sha, and cupping — sequenced.</p>
+        </header>
+        <ul class="rate-list">
+          <li>
+            <div class="rate-row">
+              <div class="rate-meta"><span class="rate-len">60 min</span><span class="rate-desc">Single session</span></div>
+              <div class="rate-price">$150</div>
+            </div>
+          </li>
+          <li>
+            <div class="rate-row">
+              <div class="rate-meta"><span class="rate-len">90 min</span><span class="rate-desc">Extended single</span></div>
+              <div class="rate-price">$210</div>
+            </div>
+          </li>
+          <li class="featured">
+            <div class="rate-row">
+              <div class="rate-meta">
+                <span class="rate-len">10 × 60 min</span>
+                <span class="rate-desc">Package · save $150</span>
+              </div>
+              <div class="rate-price">$1,350<small>$135 / session</small></div>
+            </div>
+          </li>
+          <li class="featured">
+            <div class="rate-row">
+              <div class="rate-meta">
+                <span class="rate-len">10 × 90 min</span>
+                <span class="rate-desc">Package · save $200</span>
+              </div>
+              <div class="rate-price">$1,900<small>$190 / session</small></div>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <article class="rate rate--accent">
+        <header>
+          <span class="card-num">02 / Specialty</span>
+          <h2>Perinatal<br/>Massage</h2>
+          <p>Certified prenatal and postpartum massage. Positioning, duration, and technique adapted for each trimester and stage of recovery.</p>
+        </header>
+        <ul class="rate-list">
+          <li>
+            <div class="rate-row">
+              <div class="rate-meta"><span class="rate-len">60 min</span><span class="rate-desc">Single session</span></div>
+              <div class="rate-price">$170</div>
+            </div>
+          </li>
+          <li>
+            <div class="rate-row">
+              <div class="rate-meta"><span class="rate-len">90 min</span><span class="rate-desc">Extended single</span></div>
+              <div class="rate-price">$230</div>
+            </div>
+          </li>
+          <li class="featured">
+            <div class="rate-row">
+              <div class="rate-meta">
+                <span class="rate-len">10 × 60 min</span>
+                <span class="rate-desc">Package · save $170</span>
+              </div>
+              <div class="rate-price">$1,530<small>$153 / session</small></div>
+            </div>
+          </li>
+          <li class="featured">
+            <div class="rate-row">
+              <div class="rate-meta">
+                <span class="rate-len">10 × 90 min</span>
+                <span class="rate-desc">Package · save $230</span>
+              </div>
+              <div class="rate-price">$2,070<small>$207 / session</small></div>
+            </div>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Payment / insurance -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="grid grid-2" style="gap: 80px; align-items: start;">
+      <div>
+        <span class="eyebrow">Payment &amp; Reimbursement</span>
+        <h2 style="margin: 18px 0 24px;">A clear note on insurance.</h2>
+        <p class="lead">I do not bill insurance directly. However, many clients are reimbursed through HSA, FSA, or out-of-network benefits. Superbills are available upon request after each session.</p>
+        <ul class="numbered" style="margin-top: 32px;">
+          <li>
+            <h4>FSA &amp; HSA cards accepted</h4>
+            <p>Massage therapy may be eligible for FSA and HSA reimbursement. Most plans require a Letter of Medical Necessity (LMN) from your physician confirming massage therapy is medically necessary for your specific condition. Once you have it, I can provide a superbill with the clinical codes your administrator may need.</p>
+          </li>
+          <li>
+            <h4>Superbill provided on request</h4>
+            <p>A detailed receipt with session information, clinical procedure codes, and license credentials — submit to your insurance company for out-of-network reimbursement, or use to document an FSA or HSA expense.</p>
+          </li>
+          <li>
+            <h4>Cards, ACH, and Zelle</h4>
+            <p>All major cards. ACH or Zelle for packages. No surcharges either way.</p>
+          </li>
+          <li>
+            <h4>Cancellations within 24 hours</h4>
+            <p>Less than 24 hours notice: 50% of session rate. No-shows: full session rate. Earlier reschedules — no fee.</p>
+          </li>
+        </ul>
+      </div>
+      <aside class="aside-card">
+        <span class="card-num">A note</span>
+        <h3 style="margin: 16px 0 24px;">Why packages.</h3>
+        <p>All packages are prepaid bundles of 10 sessions and are FSA/HSA eligible. The package discount isn't a sales tool — it reflects what longer-term clients save in intake time and what consistent treatment gives back to your tissue. Both compound.</p>
+        <p style="margin-top: 24px;">Detailed session notes are maintained for every client to track progress and support coordinated care with your broader healthcare team.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- Gift cards / packages note -->
+<section class="section">
+  <div class="container">
+    <div class="bottom-bar">
+      <div>
+        <span class="eyebrow">Gift Sessions</span>
+        <h3 style="margin-top: 16px;">A 60-minute or 90-minute session, on you.</h3>
+        <p style="color: var(--ink-soft); margin-top: 12px; max-width: 56ch;">Available year-round. Sent as a printed card or PDF. Recipient redeems it through the booking flow — no expiration before twelve months.</p>
+      </div>
+      <a href="contact.html" class="btn">Request a gift session →</a>
+    </div>
+  </div>
+</section>
+
+<div data-include="footer"></div>
+
+<style>
+  .rate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .rate {
+    background: var(--paper);
+    border: 1px solid var(--rule-soft);
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .rate--accent { background: var(--cream-soft); border-color: var(--rule); }
+  .rate header { padding-bottom: 32px; border-bottom: 1px solid var(--rule-soft); margin-bottom: 24px; }
+  .rate h2 { font-size: clamp(36px, 4vw, 52px); margin: 16px 0 16px; line-height: 1.05; }
+  .rate header p { color: var(--ink-soft); max-width: 40ch; }
+
+  .rate-list { list-style: none; padding: 0; margin: 0; }
+  .rate-list li { padding: 20px 0; border-bottom: 1px solid var(--rule-soft); }
+  .rate-list li:last-child { border-bottom: 0; }
+  .rate-list li.featured { background: linear-gradient(to right, var(--steel-50), transparent); margin: 0 -20px; padding: 20px; }
+  .rate--accent .rate-list li.featured { background: linear-gradient(to right, rgba(232,220,196,0.6), transparent); }
+
+  .rate-row { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; }
+  .rate-meta { display: flex; flex-direction: column; gap: 4px; }
+  .rate-len { font-family: var(--font-body); font-size: 16px; font-weight: 500; color: var(--ink); }
+  .rate-desc { font-size: 12px; letter-spacing: 0.06em; color: var(--ink-mute); text-transform: uppercase; }
+  .rate-price {
+    font-family: var(--font-display);
+    font-size: 36px;
+    color: var(--steel-900);
+    line-height: 1;
+    text-align: right;
+  }
+  .rate-price small { display: block; font-family: var(--font-body); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-mute); margin-top: 6px; font-weight: 500; }
+
+  @media (max-width: 880px) { .rate-grid { grid-template-columns: 1fr; } }
+
+  .aside-card {
+    background: var(--paper);
+    border: 1px solid var(--rule-soft);
+    padding: 40px;
+  }
+  .aside-card p { color: var(--ink-soft); }
+
+  .bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 56px;
+    background: var(--steel-50);
+    border: 1px solid var(--steel-100);
+    flex-wrap: wrap;
+  }
+  .bottom-bar h3 { font-size: 28px; }
+</style>
+
+<script src="chrome.js"></script>
+</body>
+</html>

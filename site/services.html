@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Services — Lily Wong Massage Therapy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="services">
+<div data-include="nav"></div>
+
+<header class="page-header" data-screen-label="03 Services — Header">
+  <div class="container">
+    <div class="services-header-grid">
+      <div class="services-header-copy">
+        <span class="eyebrow">Services</span>
+        <h1>One integrative session. Tailored to who you are and what you're dealing with.</h1>
+        <p class="lead">Sessions are condition-driven, not technique-driven. Every visit begins with assessment — the approach follows from there. Technique is selected based on what your body requires at that visit, drawing from the methods below as clinically appropriate.</p>
+      </div>
+      <figure class="services-header-photo">
+        <img src="images/cupping.jpg" alt="Fire cupping and gua sha applied across the back during an integrative session" />
+        <figcaption>Cupping &amp; gua sha · sequenced to the tissue</figcaption>
+      </figure>
+    </div>
+  </div>
+  <style>
+    .services-header-grid {
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: end;
+    }
+    .services-header-copy h1 { margin-bottom: 24px; }
+    .services-header-copy .lead { max-width: 52ch; margin-bottom: 0; }
+    .services-header-photo { margin: 0; }
+    .services-header-photo img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      filter: saturate(0.85);
+      display: block;
+    }
+    .services-header-photo figcaption {
+      margin-top: 14px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+    }
+    @media (max-width: 880px) {
+      .services-header-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</header>
+
+<!-- Modalities used -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="modalities-head">
+      <span class="eyebrow">Modalities Used</span>
+      <h2 style="margin-top: 18px; max-width: 22ch;">Six methods. Sequenced for your tissue.</h2>
+    </div>
+    <div class="modality-grid">
+      <article>
+        <span class="card-num">01</span>
+        <h3>Myofascial Release</h3>
+        <p>Sustained pressure to release restrictions in the connective tissue surrounding muscles — particularly post-surgical scars and old, stuck patterns.</p>
+      </article>
+      <article>
+        <span class="card-num">02</span>
+        <h3>Neuromuscular Therapy</h3>
+        <p>Targeted work on trigger points and nerve compression patterns contributing to pain and dysfunction. The headache that lives in the trapezius. The hip pain that starts in the QL.</p>
+      </article>
+      <article>
+        <span class="card-num">03</span>
+        <h3>Therapeutic &amp; Deep Tissue</h3>
+        <p>Structured soft tissue manipulation addressing deeper layers of muscle and fascia — matched to what your tissue can receive that day.</p>
+      </article>
+      <article>
+        <span class="card-num">04</span>
+        <h3>Therapeutic Stretching</h3>
+        <p>Assisted range-of-motion and lengthening work integrated where clinically indicated — between hands-on segments, never as filler.</p>
+      </article>
+      <article>
+        <span class="card-num">05</span>
+        <h3>Gua Sha</h3>
+        <p>Instrument-assisted soft tissue technique to address fascial restrictions, improve circulation, and reduce inflammation.</p>
+      </article>
+      <article>
+        <span class="card-num">06</span>
+        <h3>Cupping Therapy</h3>
+        <p>Negative pressure applied to soft tissue to decompress underlying structures and release chronic tension patterns. Marks fade in days.</p>
+      </article>
+    </div>
+<section class="section section--cream" style="padding-top: 0;">
+  <div class="container">
+    <p style="margin-top: 0; font-size: 14px; color: var(--ink-soft); max-width: 60ch;"><em class="serif-italic">Gua sha and cupping therapy may be incorporated into sessions where clinically indicated, at no additional charge.</em></p>
+  </div>
+</section>
+
+<!-- What it treats -->
+<section class="section" style="background: var(--paper);">
+  <div class="container">
+    <div class="treats-head">
+      <span class="eyebrow">Conditions &amp; Populations</span>
+      <h2 style="margin-top: 18px;">If any of these sound like your week.</h2>
+    </div>
+    <div class="treats-grid">
+      <div class="treats-col">
+        <h4>Chronic pain</h4>
+        <ul>
+          <li>Neck, shoulder, and back pain</li>
+          <li>Repetitive strain injuries</li>
+          <li>Ongoing pain management</li>
+          <li>Tension headaches and TMJ tightness</li>
+          <li>Sciatica and piriformis tension</li>
+        </ul>
+      </div>
+      <div class="treats-col">
+        <h4>Acute injury &amp; athletic</h4>
+        <ul>
+          <li>Recent sprains and strains</li>
+          <li>Soft tissue injuries</li>
+          <li>Return-to-activity support</li>
+          <li>Recovery between training</li>
+          <li>Overuse and imbalance in active clients</li>
+        </ul>
+      </div>
+      <div class="treats-col">
+        <h4>Surgical &amp; sedentary</h4>
+        <ul>
+          <li>Pre-surgical tissue preparation</li>
+          <li>Post-surgical scar mobilization</li>
+          <li>Range-of-motion restoration</li>
+          <li>Postural imbalances from desk work</li>
+          <li>Co-treatment with PT or chiropractor</li>
+        </ul>
+      </div>
+      <div class="treats-col">
+        <h4>Perinatal</h4>
+        <ul>
+          <li>Low-back and SI joint pain</li>
+          <li>Round ligament discomfort</li>
+          <li>Sciatic and piriformis tension</li>
+          <li>Postpartum core and pelvic reintegration</li>
+          <li>Carpal tunnel from nursing posture</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add-ons -->
+<section class="section section--steel">
+  <div class="container">
+    <div class="grid grid-2" style="gap: 80px; align-items: end;">
+      <div>
+        <span class="eyebrow">Included In Every Session</span>
+        <h2>Things that aren't add-ons.</h2>
+      </div>
+      <p class="lead" style="color: var(--steel-300);">A short list of what other studios charge for. Here it's just part of the work.</p>
+    </div>
+    <ul class="included">
+      <li><span>+</span><div><h4>Gua Sha</h4><p>Incorporated where clinically indicated. No additional charge.</p></div></li>
+      <li><span>+</span><div><h4>Cupping Therapy</h4><p>Static or gliding. Used as the case calls for it.</p></div></li>
+      <li><span>+</span><div><h4>Detailed session notes</h4><p>Maintained for every client to track progress and continuity of care.</p></div></li>
+      <li><span>+</span><div><h4>Coordinated care</h4><p>Communication with your referring provider to align treatment when relevant.</p></div></li>
+      <li><span>+</span><div><h4>Superbill</h4><p>Provided on request for HSA, FSA, or out-of-network reimbursement.</p></div></li>
+      <li><span>+</span><div><h4>Referrals</h4><p>To acupuncture, chiropractic, PT, or imaging when the table isn't enough.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta-band">
+  <div class="container cta-inner">
+    <h2>Not sure which session is right?</h2>
+    <a href="contact.html" class="btn">Send a few details →</a>
+  </div>
+</section>
+
+<div data-include="footer"></div>
+
+<style>
+  .modalities-head { margin-bottom: 64px; }
+  .modality-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+  }
+  .modality-grid article {
+    padding: 36px 24px 36px 0;
+    border-right: 1px solid var(--rule);
+    padding-left: 24px;
+  }
+  .modality-grid article:first-child { padding-left: 0; }
+  .modality-grid article:last-child { border-right: 0; padding-right: 0; }
+  .modality-grid h3 { margin: 24px 0 14px; font-size: 22px; }
+  .modality-grid p { color: var(--ink-soft); font-size: 14px; }
+  @media (max-width: 980px) {
+    .modality-grid { grid-template-columns: 1fr 1fr; }
+    .modality-grid article { border-right: 0; border-bottom: 1px solid var(--rule); padding-left: 0; padding-right: 0; }
+  }
+
+  .sessions { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .session {
+    background: var(--paper);
+    border: 1px solid var(--rule-soft);
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .session-tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--steel-700);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .session-head h3 { font-size: 36px; margin-top: 12px; }
+  .session-body p { color: var(--ink-soft); }
+  .session-body .lead { color: var(--ink); }
+  .session-spec { list-style: none; padding: 0; margin: 32px 0; }
+  .session-spec li {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-top: 1px solid var(--rule-soft);
+    align-items: baseline;
+    font-size: 14px;
+  }
+  .session-spec li:last-child { border-bottom: 1px solid var(--rule-soft); }
+  .session-spec span { color: var(--ink-soft); }
+  .session-spec strong { font-family: var(--font-display); font-weight: 400; font-size: 22px; color: var(--steel-900); }
+  @media (max-width: 880px) { .sessions { grid-template-columns: 1fr; } }
+
+  .treats-head { margin-bottom: 56px; }
+  .treats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; border-top: 1px solid var(--rule-soft); padding-top: 40px; }
+  .treats-col h4 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    color: var(--steel-700);
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .treats-col ul { list-style: none; padding: 0; margin: 0; }
+  .treats-col li {
+    padding: 12px 0;
+    border-top: 1px solid var(--rule-soft);
+    color: var(--ink-soft);
+    font-size: 14px;
+  }
+  @media (max-width: 880px) { .treats-grid { grid-template-columns: 1fr 1fr; } }
+
+  .included { list-style: none; padding: 0; margin: 56px 0 0; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border-top: 1px solid var(--steel-700); }
+  .included li {
+    border-bottom: 1px solid var(--steel-700);
+    border-right: 1px solid var(--steel-700);
+    padding: 28px;
+    display: flex;
+    gap: 18px;
+    align-items: start;
+  }
+  .included li:nth-child(3n) { border-right: 0; }
+  .included li > span { font-family: var(--font-display); color: var(--cream); font-size: 28px; line-height: 0.8; }
+  .included h4 { color: var(--paper); margin-bottom: 6px; }
+  .included p { color: var(--steel-300); font-size: 14px; margin: 0; }
+  @media (max-width: 880px) {
+    .included { grid-template-columns: 1fr; }
+    .included li { border-right: 0; }
+  }
+
+  .cta-band { background: var(--paper-warm); border-top: 1px solid var(--rule-soft); }
+  .cta-inner { display: flex; justify-content: space-between; align-items: center; gap: 40px; flex-wrap: wrap; }
+  .cta-inner h2 { max-width: 16ch; }
+</style>
+
+<script src="chrome.js"></script>
+</body>
+</html>
