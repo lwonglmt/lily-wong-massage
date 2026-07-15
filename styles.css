@@ -273,6 +273,29 @@ hr.rule {
   .topbar { display: none; }
   .nav-toggle { display: inline-flex; }
 
+  /* Dark steel header on mobile — mirrors the desktop topbar/footer
+     so the header stands out against the light hero. */
+  .nav {
+    background: rgba(27, 58, 75, 0.96); /* --steel-900 */
+    border-bottom: 1px solid var(--steel-700);
+  }
+  .brand,
+  .brand-name { color: var(--paper); }
+  .brand-mark {
+    border-color: var(--steel-300);
+    color: var(--cream);
+  }
+  .brand-name small { color: var(--steel-300); }
+  .nav-toggle { color: var(--paper); }
+  .nav-inner .btn-ghost {
+    border-color: var(--cream);
+    color: var(--cream);
+  }
+  .nav-inner .btn-ghost:hover {
+    background: var(--cream);
+    color: var(--steel-900);
+  }
+
   .nav-links {
     display: none;
     position: absolute;
@@ -282,11 +305,15 @@ hr.rule {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    background: var(--paper);
-    border-bottom: 1px solid var(--rule-soft);
+    background: var(--steel-900);
+    border-bottom: 1px solid var(--steel-700);
     padding: 4px var(--gutter) 16px;
+    color: var(--steel-100);
   }
   .nav-links a { padding: 12px 0; }
+  .nav-links a:hover { color: var(--cream); }
+  .nav-links a.active { color: var(--cream); }
+  .nav-links a.active::after { background: var(--cream); }
   .nav.nav-open .nav-links { display: flex; }
 }
 
