@@ -41,12 +41,22 @@
         <a href="index.html" class="brand">
           <span class="brand-mark">L</span>
           <span class="brand-name">
-            Lily Wong Massage Therapy
+            <span class="brand-name-full">Lily Wong Massage Therapy</span>
+            <span class="brand-name-short">Lily Wong</span>
             <small>Integrative Therapeutic Care</small>
           </span>
         </a>
         <div class="nav-links">${navLinks}</div>
-        <a href="contact.html" class="btn btn-ghost">Book</a>
+        <div class="nav-actions">
+          <a href="contact.html" class="btn btn-ghost">Book</a>
+          <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="2" y1="5" x2="20" y2="5" stroke="currentColor" stroke-width="1.6"/>
+              <line x1="2" y1="11" x2="20" y2="11" stroke="currentColor" stroke-width="1.6"/>
+              <line x1="2" y1="17" x2="20" y2="17" stroke="currentColor" stroke-width="1.6"/>
+            </svg>
+          </button>
+        </div>
       </div>
     </nav>`;
 
@@ -68,15 +78,13 @@
           <div>
             <h4>Visit</h4>
             <a href="faq.html">FAQ</a>
-            <a href="contact.html">First Visit Guide</a>
-            <a href="contact.html">Hours &amp; Location</a>
             <a href="contact.html">Contact</a>
           </div>
           <div>
             <h4>Studio</h4>
-            <a href="#">44 E 32nd Street, 8th Floor<br/>New York, NY 10016</a>
+            <p>44 E 32nd Street, 8th Floor<br/>New York, NY 10016</p>
             <a href="mailto:lwonglmt@gmail.com">lwonglmt@gmail.com</a>
-            <a href="#">Phone provided upon booking</a>
+            <p>Phone provided upon booking</p>
           </div>
         </div>
         <div class="footer-bottom">
@@ -91,6 +99,22 @@
 
   const footHost = document.querySelector('[data-include="footer"]');
   if (footHost) footHost.outerHTML = footer;
+
+  // Mobile nav toggle
+  const navEl = document.querySelector(".nav");
+  const navToggle = document.querySelector(".nav-toggle");
+  if (navEl && navToggle) {
+    navToggle.addEventListener("click", () => {
+      const isOpen = navEl.classList.toggle("nav-open");
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+    navEl.querySelectorAll(".nav-links a").forEach((a) => {
+      a.addEventListener("click", () => {
+        navEl.classList.remove("nav-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
 
   // Reveal-on-scroll
   if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
