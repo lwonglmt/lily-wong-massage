@@ -24,27 +24,31 @@
 <section class="section">
   <div class="container">
     <div class="contact-layout">
-      <form class="contact-form" onsubmit="event.preventDefault(); document.getElementById('thanks').style.display='block'; this.style.display='none';">
+      <form class="contact-form" id="inquiry-form" action="https://formsubmit.co/lwonglmt@gmail.com" method="POST">
         <h2>Inquiry form</h2>
+
+        <input type="hidden" name="_subject" value="New inquiry — lilywongmassage.com" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
         <div class="grid-row">
           <div class="field">
             <label for="name">Name</label>
-            <input id="name" type="text" required />
+            <input id="name" name="Name" type="text" required />
           </div>
           <div class="field">
             <label for="email">Email</label>
-            <input id="email" type="email" required />
+            <input id="email" name="Email" type="email" required />
           </div>
         </div>
         <div class="grid-row">
           <div class="field">
             <label for="phone">Phone (optional)</label>
-            <input id="phone" type="tel" />
+            <input id="phone" name="Phone" type="tel" />
           </div>
           <div class="field">
             <label for="session">Session type</label>
-            <select id="session">
+            <select id="session" name="Session type">
               <option>Integrative · 60 min</option>
               <option>Integrative · 90 min</option>
               <option>Perinatal · 60 min</option>
@@ -55,18 +59,18 @@
         </div>
         <div class="field">
           <label for="reason">What brings you in?</label>
-          <textarea id="reason" placeholder="A few sentences on what's going on, what you've tried, and what you're hoping for."></textarea>
+          <textarea id="reason" name="What brings you in" placeholder="A few sentences on what's going on, what you've tried, and what you're hoping for."></textarea>
         </div>
         <div class="field">
           <label for="when">Preferred days &amp; times</label>
-          <input id="when" type="text" placeholder="e.g. Tuesday or Thursday evenings, Saturday morning" />
+          <input id="when" name="Preferred days and times" type="text" placeholder="e.g. Tuesday or Thursday evenings, Saturday morning" />
         </div>
 
         <div class="checkboxes">
-          <label><input type="checkbox" /> First-time client</label>
-          <label><input type="checkbox" /> Referred by a practitioner</label>
-          <label><input type="checkbox" /> Plan to use HSA / FSA</label>
-          <label><input type="checkbox" /> Need a superbill</label>
+          <label><input type="checkbox" name="First-time client" value="Yes" /> First-time client</label>
+          <label><input type="checkbox" name="Referred by a practitioner" value="Yes" /> Referred by a practitioner</label>
+          <label><input type="checkbox" name="Plan to use HSA / FSA" value="Yes" /> Plan to use HSA / FSA</label>
+          <label><input type="checkbox" name="Need a superbill" value="Yes" /> Need a superbill</label>
         </div>
 
         <button type="submit" class="btn">Send Inquiry</button>
@@ -257,5 +261,33 @@
 </style>
 
 <script src="chrome.js"></script>
+<script>
+  // Submit the inquiry form via FormSubmit without leaving the page,
+  // then show the existing thank-you message.
+  (function () {
+    const form = document.getElementById("inquiry-form");
+    if (!form) return;
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = "Sending\u2026";
+      try {
+        const res = await fetch("https://formsubmit.co/ajax/lwonglmt@gmail.com", {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: new FormData(form),
+        });
+        if (!res.ok) throw new Error("send failed");
+        document.getElementById("thanks").style.display = "block";
+        form.style.display = "none";
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = "Send Inquiry";
+        alert("Sorry \u2014 something went wrong sending your inquiry. Please email lwonglmt@gmail.com directly.");
+      }
+    });
+  })();
+</script>
 </body>
 </html>
