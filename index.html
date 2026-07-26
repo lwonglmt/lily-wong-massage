@@ -189,14 +189,23 @@
     .hero-copy { order: 2; }
     .hero-copy > .eyebrow { display: none; }
     .hero-image { order: 1; margin-bottom: 8px; }
+    .hero { padding-top: 28px; }
     .hero-mobile-eyebrow {
-      display: inline-flex;
-      font-size: 12px;
-      margin-bottom: 18px;
-      padding-bottom: 14px;
+      display: block;
+      font-family: var(--font-display);
+      font-size: 30px;
+      font-weight: 500;
+      font-style: italic;
+      letter-spacing: -0.01em;
+      text-transform: none;
+      color: var(--steel-900);
+      text-align: center;
+      margin-bottom: 20px;
+      padding-bottom: 18px;
       border-bottom: 1px solid var(--rule-soft);
       width: 100%;
     }
+    .hero-mobile-eyebrow::before { display: none; }
     .hero-photo {
       margin: 0 calc(-1 * var(--gutter));
       aspect-ratio: 5/4;
