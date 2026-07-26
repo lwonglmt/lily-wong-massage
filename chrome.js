@@ -43,7 +43,7 @@
           <span class="brand-name">
             <span class="brand-name-full">Lily Wong Massage Therapy</span>
             <span class="brand-name-short">Lily Wong</span>
-            <small>Integrative Therapeutic Care</small>
+            <small>Integrative Medical Massage</small>
           </span>
         </a>
         <div class="nav-links">${navLinks}</div>
@@ -66,7 +66,7 @@
         <div class="footer-grid">
           <div>
             <div class="footer-brand">Lily Wong Massage Therapy</div>
-            <p class="footer-brand-tag">Condition-driven integrative massage for chronic pain, injury recovery, and surgical preparation. Midtown Manhattan and Long Island.</p>
+            <p class="footer-brand-tag">Condition-driven integrative medical massage for chronic pain, injury recovery, and surgical preparation. Midtown Manhattan and Long Island.</p>
           </div>
           <div>
             <h4>Practice</h4>
