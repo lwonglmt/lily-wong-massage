@@ -317,6 +317,23 @@ hr.rule {
   .nav.nav-open .nav-links { display: flex; }
 }
 
+/* Mobile welcome band — slim cream strip under the header */
+.topbar-mobile { display: none; }
+@media (max-width: 1100px) {
+  .topbar-mobile {
+    display: block;
+    background: var(--cream-soft);
+    color: var(--steel-700);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 9px var(--gutter);
+    border-bottom: 1px solid var(--rule);
+  }
+}
+
 /* Phone-width nav: shrink brand text and CTA so the menu button
    never gets pushed off-screen on narrow devices. */
 @media (max-width: 560px) {

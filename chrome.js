@@ -95,7 +95,10 @@
     </footer>`;
 
   const navHost = document.querySelector('[data-include="nav"]');
-  if (navHost) navHost.outerHTML = topbar + nav;
+  const mobileBand = `
+    <div class="topbar-mobile">By appointment · Tue · Wed · Fri · Sat &nbsp;—&nbsp; Midtown &amp; Long Island</div>`;
+
+  if (navHost) navHost.outerHTML = topbar + nav + mobileBand;
 
   const footHost = document.querySelector('[data-include="footer"]');
   if (footHost) footHost.outerHTML = footer;
